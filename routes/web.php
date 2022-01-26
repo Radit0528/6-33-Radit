@@ -17,16 +17,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/', function () {
-    return view('home');
+    return view('home', [
+        "title" => "Home"
+    ]);
 });
 Route::get('/about', function () {
     return view('about', [
+        "title" => "About",
         "nama" => "Wisnu Rananta Raditya Putra",
         "email" => "3103120231@student.smktelkom-pwt.sch.id",
         "gambar" => "radit.jpeg"
     ]);
 });
 Route::get('/gallery', function () {
-    return view('gallery');
+    return view('gallery', [
+        "title" => "Gallery"
+    ]);
 });
 
